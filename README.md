@@ -15,6 +15,14 @@ log4j.appender.server.RemoteHost=your.logging.host
 log4j.appender.server.ReconnectionDelay=10000
 log4j.appender.server.LocationInfo=true
 log4j.appender.server.Application=theNameOfYourApplication
+
+#
+# It is also possible to specify a specific MDC key and host name value
+#
+#Default value: "real_source_host"
+#log4j.appender.server.MdcKeyForHostname=applicationNode
+#Default value: InetAddress.getLocalHost().getHostName()
+#log4j.appender.server.HostName=001
 ```
 
 ###### Existing webapps deployed on Tomcat
