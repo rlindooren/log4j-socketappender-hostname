@@ -4,7 +4,7 @@
     <groupId>log4j</groupId>
     <artifactId>log4j-socketappender-hostname</artifactId>
     <packaging>jar</packaging>
-    <version>1.002</version>
+    <version>1.1</version>
     <description>This extension of Log4J's regular SocketAppender adds the host name to the logging event before sending it to a SocketServer.
     When a SocketServer receives events from multiple hosts this allows to track on which host the event took place.</description>
     <url>https://github.com/rlindooren/log4j-socketappender-hostname</url>
