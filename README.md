@@ -22,7 +22,7 @@ log4j.appender.server.Application=theNameOfYourApplication
 #Default value: "real_source_host"
 #log4j.appender.server.MdcKeyForHostname=applicationNode
 #Default value: InetAddress.getLocalHost().getHostName()
-#log4j.appender.server.HostName=001
+#log4j.appender.server.Hostname=001
 ```
 
 ###### Existing webapps deployed on Tomcat

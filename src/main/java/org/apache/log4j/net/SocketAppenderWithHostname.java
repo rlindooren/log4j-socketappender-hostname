@@ -12,7 +12,7 @@ public class SocketAppenderWithHostname extends SocketAppender {
     
     private String mdcKeyForHostname = DEFAULT_MDC_KEY_FOR_HOSTNAME;
 
-    private String hostName;
+    private String hostname;
 
     @Override
     public void append(LoggingEvent event) {
@@ -24,22 +24,22 @@ public class SocketAppenderWithHostname extends SocketAppender {
         if (event == null) {
             return;
         }
-        event.setProperty(getMdcKeyForHostname(), getHostName());
+        event.setProperty(getMdcKeyForHostname(), getHostname());
     }
 
-    public String getHostName() {
-        if (hostName == null) {
+    public String getHostname() {
+        if (hostname == null) {
             try {
-                hostName = InetAddress.getLocalHost().getHostName();
+                hostname = InetAddress.getLocalHost().getHostName();
             } catch (UnknownHostException e) {
-                hostName = "unknown";
+                hostname = "unknown";
             }
         }
-        return hostName;
+        return hostname;
     }
 
-    public void setHostName(String hostName) {
-        this.hostName = hostName;
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
     }
 
     public String getMdcKeyForHostname() {

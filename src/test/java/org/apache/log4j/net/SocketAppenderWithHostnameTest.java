@@ -31,7 +31,7 @@ public class SocketAppenderWithHostnameTest {
 
         SocketAppenderWithHostname appender = new SocketAppenderWithHostname();
         appender.setMdcKeyForHostname(mdcKey);
-        appender.setHostName(hostName);
+        appender.setHostname(hostName);
 
         LoggingEvent loggingEvent = new LoggingEvent("", Logger.getLogger("foo"), Level.INFO, "Test message", null);
         assertNull(loggingEvent.getMDC(SocketAppenderWithHostname.DEFAULT_MDC_KEY_FOR_HOSTNAME));
