@@ -42,4 +42,18 @@ public class SocketAppenderWithHostnameTest {
         assertNull(loggingEvent.getMDC(SocketAppenderWithHostname.DEFAULT_MDC_KEY_FOR_HOSTNAME));
         assertEquals(hostName, loggingEvent.getMDC(mdcKey));
     }
+
+    @Test
+    public void testAddExtraMdcVariables() throws Exception {
+        SocketAppenderWithHostname appender = new SocketAppenderWithHostname();
+        LoggingEvent loggingEvent = new LoggingEvent("", Logger.getLogger("foo"), Level.INFO, "Test message", null);
+
+        assertNull(loggingEvent.getMDC("env"));
+        assertNull(loggingEvent.getMDC("client"));
+
+        appender.setExtraMdcValues("env=dev,client=Acme");
+        
+        assertEquals("dev", loggingEvent.getMDC("env"));
+        assertEquals("client", loggingEvent.getMDC("Acme"));
+    }
 }

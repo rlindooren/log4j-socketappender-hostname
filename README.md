@@ -23,6 +23,11 @@ log4j.appender.server.Application=theNameOfYourApplication
 #log4j.appender.server.MdcKeyForHostname=applicationNode
 #Default value: InetAddress.getLocalHost().getHostName()
 #log4j.appender.server.Hostname=001
+
+#
+# You can also specify additional static MDC values that will be added to all serialized logging events
+#
+#log4j.appender.server.ExtraMdcValues=env=dev,client=Acme
 ```
 
 ###### Existing webapps deployed on Tomcat
