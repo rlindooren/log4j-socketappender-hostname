@@ -52,8 +52,9 @@ public class SocketAppenderWithHostnameTest {
         assertNull(loggingEvent.getMDC("client"));
 
         appender.setExtraMdcValues("env=dev,client=Acme");
+        appender.addExtraMdcValuesToEvent(loggingEvent);
         
         assertEquals("dev", loggingEvent.getMDC("env"));
-        assertEquals("client", loggingEvent.getMDC("Acme"));
+        assertEquals("Acme", loggingEvent.getMDC("client"));
     }
 }
