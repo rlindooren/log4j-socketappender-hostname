@@ -6,7 +6,7 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Starting " + SimpleSocketServer.class.getSimpleName());
-        final String pathToConfig = Server.class.getResource("/log4j-server.properties").getFile();
+        final String pathToConfig = Server.class.getResource("/log4j-demo-server.properties").getFile();
         SimpleSocketServer.main(new String[] {"4560", pathToConfig});
     }
 }

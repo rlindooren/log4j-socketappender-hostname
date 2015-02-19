@@ -10,9 +10,11 @@ import org.apache.log4j.Priority;
 
 public class Client {
 
-    private final static Logger logger = Logger.getLogger(Client.class);
-
     public static void main(String[] args) throws Exception {
+
+        System.setProperty("log4j.configuration", "log4j-demo-client.properties");
+
+        final Logger logger = Logger.getLogger(Client.class);
 
         final int nrOfLoggers = 3;
 
