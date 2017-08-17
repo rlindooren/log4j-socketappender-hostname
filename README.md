@@ -1,7 +1,7 @@
 This extension of Log4J's regular SocketAppender adds the host name to the logging event before sending it to a SocketServer.
 When a SocketServer receives events from multiple hosts this allows to track on which host the event took place.
 
-###How to use
+## How to use
 
 You basically use the SocketAppenderWithHostname instead of the regular SocketAppender
 
@@ -30,7 +30,7 @@ log4j.appender.server.Application=theNameOfYourApplication
 #log4j.appender.server.ExtraMdcValues=env=dev,client=Acme
 ```
 
-###### Existing webapps deployed on Tomcat
+#### Existing webapps deployed on Tomcat
 
 When deployed on Tomcat, it is possible to use this appender without having to modify existing webapps.
 
